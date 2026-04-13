@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pcms"
+version = "1.0.0"
+description = "Personal Chat Memory System — nothing leaves without your permission"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0",
+    "python-dateutil>=2.8",
+]
+
+[project.scripts]
+pcms = "pcms.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pcms*"]
